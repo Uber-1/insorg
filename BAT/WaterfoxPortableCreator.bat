@@ -1,14 +1,14 @@
 @echo off
-@title Waterfox Portable Creator - ver.4.4.3.1 [15.10.2023]
+@title Waterfox Portable Creator - ver.4.4.5 [28.10.2023]
 @cd /d "%~dp0"
 
 @if not exist "curl.exe" @if not exist "%SystemRoot%\SYSTEM32\curl.exe" (
 @echo Downloading with powershell . . .
-@powershell -Command "$wc = New-Object System.Net.WebClient; $wc.Headers.Add('referer','https://cdn1.waterfox.net'); $wc.DownloadFile('https://cdn1.waterfox.net/waterfox/releases/G6.0.4/WINNT_x86_64/Waterfox%%20Setup%%20G6.0.4.exe', 'wfwin.exe.7z')"
+@powershell -Command "$wc = New-Object System.Net.WebClient; $wc.Headers.Add('referer','https://cdn1.waterfox.net'); $wc.DownloadFile('https://cdn1.waterfox.net/waterfox/releases/G6.0.5/WINNT_x86_64/Waterfox%%20Setup%%20G6.0.5.exe', 'wfwin.exe.7z')"
 @powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.7-zip.org/a/7zr.exe', '7zr.exe')"
 ) else (
 @echo Downloading with CURL . . .
-@curl.exe -RL# "https://cdn1.waterfox.net/waterfox/releases/G6.0.4/WINNT_x86_64/Waterfox%%20Setup%%20G6.0.4.exe" -e"https://cdn1.waterfox.net" -o "wfwin.exe.7z"
+@curl.exe -RL# "https://cdn1.waterfox.net/waterfox/releases/G6.0.5/WINNT_x86_64/Waterfox%%20Setup%%20G6.0.5.exe" -e"https://cdn1.waterfox.net" -o "wfwin.exe.7z"
 @curl.exe -RLO# "https://www.7-zip.org/a/7zr.exe"
 )
 
@@ -498,7 +498,7 @@
 @echo defaultPref^("toolkit.telemetry.reportingpolicy.firstRun", false^);
 @echo defaultPref^("toolkit.telemetry.server", ""^);
 @echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabled", false^);
-@echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", true^);
+@echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false^);
 @echo defaultPref^("toolkit.telemetry.unified", false^);
 @echo defaultPref^("toolkit.telemetry.updatePing.enabled", false^);
 @echo defaultPref^("toolkit.telemetry.unifiedIsOptIn", false^);
@@ -614,6 +614,9 @@
 @echo.menupopup, .menupopup-arrowscrollbox { border-radius:0px !important; }
 @echo.menupopup ^> menuitem, menupopup ^> menu { padding-block:2px !important; }  /* Set spacing here 0-4px */
 @echo.:root { --arrowpanel-menuitem-padding: 0px 4px !important; } /* Options menu spacing */
+@echo.
+@echo./* 119 */
+@echo.#private-browsing-indicator-with-label ^> label {display: none;}
 )>"WaterfoxPortable\portable\chrome\userChrome.css"
 
 (@echo {"windows":[],"selectedWindow":0,"_closedWindows":[],"session":{},"scratchpads":[],"global":{}})>"WaterfoxPortable\portable\sessionstore.js"
@@ -1108,7 +1111,7 @@
 @echo user_pref^("toolkit.telemetry.reportingpolicy.firstRun", false^);
 @echo user_pref^("toolkit.telemetry.server", ""^);
 @echo user_pref^("toolkit.telemetry.shutdownPingSender.enabled", false^);
-@echo user_pref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", true^);
+@echo user_pref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false^);
 @echo user_pref^("toolkit.telemetry.unified", false^);
 @echo user_pref^("toolkit.telemetry.updatePing.enabled", false^);
 @echo user_pref^("toolkit.telemetry.unifiedIsOptIn", false^);

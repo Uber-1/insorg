@@ -1,5 +1,5 @@
 @echo off
-@title Firefox Portable Creator - ver.4.4.3.1 [15.10.2023]
+@title Firefox Portable Creator - ver.4.4.5 [28.10.2023]
 @cd /d "%~dp0"
 
 ::  https://ftp.mozilla.org/pub/firefox/releases/latest-esr/README.txt
@@ -506,7 +506,7 @@
 @echo defaultPref^("toolkit.telemetry.reportingpolicy.firstRun", false^);
 @echo defaultPref^("toolkit.telemetry.server", ""^);
 @echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabled", false^);
-@echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", true^);
+@echo defaultPref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false^);
 @echo defaultPref^("toolkit.telemetry.unified", false^);
 @echo defaultPref^("toolkit.telemetry.updatePing.enabled", false^);
 @echo defaultPref^("toolkit.telemetry.unifiedIsOptIn", false^);
@@ -622,6 +622,9 @@
 @echo.menupopup, .menupopup-arrowscrollbox { border-radius:0px !important; }
 @echo.menupopup ^> menuitem, menupopup ^> menu { padding-block:2px !important; }  /* Set spacing here 0-4px */
 @echo.:root { --arrowpanel-menuitem-padding: 0px 4px !important; } /* Options menu spacing */
+@echo.
+@echo./* 119 */
+@echo.#private-browsing-indicator-with-label ^> label {display: none;}
 )>"FirefoxPortable\portable\chrome\userChrome.css"
 
 (@echo {"windows":[],"selectedWindow":0,"_closedWindows":[],"session":{},"scratchpads":[],"global":{}})>"FirefoxPortable\portable\sessionstore.js"
@@ -1116,7 +1119,7 @@
 @echo user_pref^("toolkit.telemetry.reportingpolicy.firstRun", false^);
 @echo user_pref^("toolkit.telemetry.server", ""^);
 @echo user_pref^("toolkit.telemetry.shutdownPingSender.enabled", false^);
-@echo user_pref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", true^);
+@echo user_pref^("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false^);
 @echo user_pref^("toolkit.telemetry.unified", false^);
 @echo user_pref^("toolkit.telemetry.updatePing.enabled", false^);
 @echo user_pref^("toolkit.telemetry.unifiedIsOptIn", false^);
