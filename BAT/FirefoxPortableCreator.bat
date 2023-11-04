@@ -1,5 +1,5 @@
 @echo off
-@title Firefox Portable Creator - ver.4.4.5 [28.10.2023]
+@title Firefox Portable Creator - ver.4.5.0 [05.11.2023]
 @cd /d "%~dp0"
 
 ::  https://ftp.mozilla.org/pub/firefox/releases/latest-esr/README.txt
@@ -214,6 +214,14 @@
 @echo defaultPref^("browser.sessionstore.restore_on_demand", false^);
 @echo defaultPref^("browser.sessionstore.warnOnQuit", true^);
 @echo defaultPref^("browser.shell.checkDefaultBrowser", false^);
+@echo defaultPref^("browser.shopping.experience2023.active", false^);
+@echo defaultPref^("browser.shopping.experience2023.ads.enabled", false^);
+@echo defaultPref^("browser.shopping.experience2023.ads.userEnabled", false^);
+@echo defaultPref^("browser.shopping.experience2023.enabled", false^);
+@echo defaultPref^("browser.shopping.experience2023.optedIn", 0^);
+@echo defaultPref^("browser.shopping.experience2023.survey.enabled", false^);
+@echo defaultPref^("browser.shopping.experience2023.survey.hasSeen", false^);
+@echo defaultPref^("browser.shopping.experience2023.survey.pdpVisits", 0^);
 @echo defaultPref^("browser.slowStartup.averageTime", 0^);
 @echo defaultPref^("browser.slowStartup.notificationDisabled", true^);
 @echo defaultPref^("browser.slowStartup.samples", 0^);
@@ -494,6 +502,8 @@
 @echo defaultPref^("toolkit.crashreporter.infoURL", ""^);
 @echo defaultPref^("toolkit.datacollection.infoURL", ""^);
 @echo defaultPref^("toolkit.legacyUserProfileCustomizations.stylesheets", true^);
+@echo defaultPref^("toolkit.shopping.ohttpConfigURL", ""^);
+@echo defaultPref^("toolkit.shopping.ohttpRelayURL", ""^);
 @echo defaultPref^("toolkit.telemetry.archive.enabled", false^);
 @echo defaultPref^("toolkit.telemetry.bhrPing.enabled", false^);
 @echo defaultPref^("toolkit.telemetry.cachedClientID", ""^);
@@ -827,6 +837,14 @@
 @echo user_pref^("browser.sessionstore.restore_on_demand", false^);
 @echo user_pref^("browser.sessionstore.warnOnQuit", true^);
 @echo user_pref^("browser.shell.checkDefaultBrowser", false^);
+@echo user_pref^("browser.shopping.experience2023.active", false^);
+@echo user_pref^("browser.shopping.experience2023.ads.enabled", false^);
+@echo user_pref^("browser.shopping.experience2023.ads.userEnabled", false^);
+@echo user_pref^("browser.shopping.experience2023.enabled", false^);
+@echo user_pref^("browser.shopping.experience2023.optedIn", 0^);
+@echo user_pref^("browser.shopping.experience2023.survey.enabled", false^);
+@echo user_pref^("browser.shopping.experience2023.survey.hasSeen", false^);
+@echo user_pref^("browser.shopping.experience2023.survey.pdpVisits", 0^);
 @echo user_pref^("browser.slowStartup.averageTime", 0^);
 @echo user_pref^("browser.slowStartup.notificationDisabled", true^);
 @echo user_pref^("browser.slowStartup.samples", 0^);
@@ -1107,6 +1125,8 @@
 @echo user_pref^("toolkit.crashreporter.infoURL", ""^);
 @echo user_pref^("toolkit.datacollection.infoURL", ""^);
 @echo user_pref^("toolkit.legacyUserProfileCustomizations.stylesheets", true^);
+@echo user_pref^("toolkit.shopping.ohttpConfigURL", ""^);
+@echo user_pref^("toolkit.shopping.ohttpRelayURL", ""^);
 @echo user_pref^("toolkit.telemetry.archive.enabled", false^);
 @echo user_pref^("toolkit.telemetry.bhrPing.enabled", false^);
 @echo user_pref^("toolkit.telemetry.cachedClientID", ""^);
