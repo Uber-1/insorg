@@ -2,8 +2,8 @@
 @title Firefox Portable Creator - ver.4.5.1 [10.11.2023]
 @cd /d "%~dp0"
 
-::  https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt
-::  product=firefox-latest	- version
+::  https://ftp.mozilla.org/pub/firefox/releases/latest-esr/README.txt
+::  product=firefox-esr-latest	- version
 ::  os=win	- 32 bits
 ::  os=win64	- 64 bits
 ::  lang=en-US	- English
@@ -12,11 +12,11 @@
 
 @if not exist "curl.exe" @if not exist "%SystemRoot%\SYSTEM32\curl.exe" (
 @echo Downloading with powershell . . .
-@powershell -Command "$wc = New-Object System.Net.WebClient; $wc.Headers.Add('referer','https://download.mozilla.org'); $wc.DownloadFile('https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US', 'ffwin.exe.7z')"
+@powershell -Command "$wc = New-Object System.Net.WebClient; $wc.Headers.Add('referer','https://download.mozilla.org'); $wc.DownloadFile('https://download.mozilla.org/?product=firefox-esr-latest&os=win&lang=en-US', 'ffwin.exe.7z')"
 @powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.7-zip.org/a/7zr.exe', '7zr.exe')"
 ) else (
 @echo Downloading with CURL . . .
-@curl.exe -RL# "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US" -e"https://download.mozilla.org" -o "ffwin.exe.7z"
+@curl.exe -RL# "https://download.mozilla.org/?product=firefox-esr-latest&os=win&lang=en-US" -e"https://download.mozilla.org" -o "ffwin.exe.7z"
 @curl.exe -RLO# "https://www.7-zip.org/a/7zr.exe"
 )
 

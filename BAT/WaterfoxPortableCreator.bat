@@ -1,5 +1,5 @@
 @echo off
-@title Waterfox Portable Creator - ver.4.5.0 [05.11.2023]
+@title Waterfox Portable Creator - ver.4.5.1 [10.11.2023]
 @cd /d "%~dp0"
 
 @if not exist "curl.exe" @if not exist "%SystemRoot%\SYSTEM32\curl.exe" (
@@ -413,8 +413,8 @@
 @echo defaultPref^("media.webspeech.recognition.force_enable", false^);
 @echo defaultPref^("media.webspeech.synth.enabled", false^);
 @echo defaultPref^("media.wmf.deblacklisting-for-telemetry-in-gpu-process", false^);
-@echo defaultPref^("mousewheel.default.delta_multiplier_y", 150^);
-@echo defaultPref^("mousewheel.min_line_scroll_amount", 50^);
+@echo defaultPref^("mousewheel.default.delta_multiplier_y", 450^);
+@echo // defaultPref^("mousewheel.min_line_scroll_amount", 5^);
 @echo defaultPref^("network.allow-experiments", false^);
 @echo defaultPref^("network.captive-portal-service.enabled", false^);
 @echo defaultPref^("network.captive-portal-service.maxInterval", 0^);
@@ -1036,8 +1036,8 @@
 @echo user_pref^("media.webspeech.recognition.force_enable", false^);
 @echo user_pref^("media.webspeech.synth.enabled", false^);
 @echo user_pref^("media.wmf.deblacklisting-for-telemetry-in-gpu-process", false^);
-@echo user_pref^("mousewheel.default.delta_multiplier_y", 150^);
-@echo user_pref^("mousewheel.min_line_scroll_amount", 50^);
+@echo user_pref^("mousewheel.default.delta_multiplier_y", 450^);
+@echo // user_pref^("mousewheel.min_line_scroll_amount", 5^);
 @echo user_pref^("network.allow-experiments", false^);
 @echo user_pref^("network.captive-portal-service.enabled", false^);
 @echo user_pref^("network.captive-portal-service.maxInterval", 0^);
