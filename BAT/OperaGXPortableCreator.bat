@@ -1,5 +1,5 @@
 @echo off
-@title Opera GX Portable downloader + configer ^| ver.3.1 [13.10.2023]
+@title Opera GX Portable downloader + configer ^| ver.3.2 [08.12.2023]
 @cd /d "%~dp0"
 
 @echo Download, unpack...
@@ -45,8 +45,7 @@
 @echo %cr_pref6%)>"OperaPortable\profile\data\Preferences"
 (@echo {"single_profile": true})>"OperaPortable\installer_prefs.json"
 (@echo {"_all_users":false,"copy_only":true,"files":[""],"path":"","product":"Opera","registry":{},"root_files":[],"version":""})>"OperaPortable\installation_status.json"
-(@echo @del /f /s ssdfp* &@echo @start Opera.exe --disable-gpu-shader-disk-cache --disk-cache-dir=nul --disk-cache-size=1 --disable-background-networking --disable-component-update --no-default-browser-check)>"OperaPortable\Launcher.bat"
-@xcopy "OperaPortable\profile\data\*.*" "data\*.*"
+(@echo @del /f /s ssdfp* &@echo @start Opera.exe --user-data-dir=profile\Data --disable-gpu-shader-disk-cache --disk-cache-dir=nul --disk-cache-size=1 --disable-background-networking --disable-component-update --no-default-browser-check)>"OperaPortable\Launcher.bat"
 
 @echo Done!
 @pause > nul
